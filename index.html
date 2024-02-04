@@ -4,31 +4,131 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Momentum</title>
+    <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <div id="greeting-section">
-      <h1 id="greeting-question">Hello, what's your name?</h1>
-      <form id="greeting-form" action="#">
-        <input required maxlength="16" type="text" />
-        <input type="submit" value="Log In" />
-      </form>
-    </div>
-    <h2 class="hidden" id="username"></h2>
-    <h2 id="clock"></h2>
-    <h3 id="quote">
-      <span></span>
-      <span></span>
-    </h3>
-    <form id="todos-form" action="">
-      <label for="todos-input">오늘의 할 일은?</label>
-      <input id="todos-input" type="text" />
-    </form>
-    <ul id="todos"></ul>
+    <div class="boot"><img src="img/booting.gif" /></div>
+    <main>
+      <div id="system" class="background-icon-wrap">
+        <img src="img/computer_explorer-5.png" alt="" />
+        <span>내 컴퓨터</span>
+      </div>
+      <div class="background-icon-wrap">
+        <img src="img/directory_open_file_mydocs-4.png" alt="" />
+        <span>내 문서</span>
+      </div>
+      <div class="background-icon-wrap">
+        <img src="img/msie1-2.png" alt="" />
+        <span>Internet Explorer</span>
+      </div>
+      <div id="notepad" class="background-icon-wrap">
+        <img src="img/notepad-2.png" alt="" />
+        <span>메모장</span>
+      </div>
+      <div class="notepad-todos hidden">
+        <div class="notepad-todos__header">
+          <div class="notepad-todos__header__title">
+            <img src="img/notepad-2.png" alt="" />
+            <span>Notepad - 할 일 목록</span>
+          </div>
+          <div class="notepad-todos__header__icons">
+            <img src="img/min.png" alt="" />
+            <img src="img/max.png" alt="" />
+            <img src="img/close.png" id="close-button" alt="" />
+          </div>
+        </div>
+        <div class="notepad-todos__main">
+          <form class="todos-form hidden" id="todos-form" action="">
+            <input id="todos-input" type="text" placeholder="오늘의 할 일은?" />
+          </form>
+          <ul class="hidden" id="todos"></ul>
+          <h4>내 컴퓨터를 열어 로그인을 해주세요.</h4>
+        </div>
+      </div>
 
+      <div class="computer-greeting hidden">
+        <div class="notepad-todos__header">
+          <div class="notepad-todos__header__title">
+            <span>시스템 등록 정보</span>
+          </div>
+          <div class="notepad-todos__header__icons">
+            <img src="img/min.png" alt="" />
+            <img src="img/max.png" alt="" />
+            <img src="img/close.png" id="close-button" alt="" />
+          </div>
+        </div>
+        <div class="computer-greeting__main">
+          <div class="computer-greeting__main__tab">
+            <span>일반</span>
+          </div>
+          <div class="computer-greeting__main__screen">
+            <div class="computer-greeting__main__screen-img">
+              <img src="img/computer.png" alt="" />
+            </div>
+            <div class="computer-greeting__main__screen-text">
+              <div class="greeting-section" id="greeting-section">
+                <h1 id="greeting-question">이름이 뭔가요?</h1>
+                <form id="greeting-form" action="#">
+                  <input required maxlength="16" type="text" />
+                  <input type="submit" value="확인" />
+                </form>
+              </div>
+              <h2 class="greeting-span hidden" id="username"></h2>
+              <h3 class="weather" id="weather">
+                <span></span>
+                <span></span>
+              </h3>
+              <h3 class="quote" id="quote">
+                <span></span>
+                <span></span>
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="start-menu hidden">
+        <img src="img/startmenu.png" alt="" />
+      </div>
+      <div class="start-bar">
+        <div class="start-bar__button">
+          <button id="start-menu-button">
+            <img src="img/windows-0.png" alt="" />
+            <span>시작</span>
+          </button>
+        </div>
+        <div class="start-bar__icon-wrap">
+          <div class="vertical-line-wrap">
+            <div class="vertical-line"></div>
+            <div class="vertical-outline"></div>
+          </div>
+          <img src="img/desktop-1.png" alt="" />
+          <img src="img/msie1-1.png" alt="" />
+          <img src="img/outlook_express-1.png" alt="" />
+          <img src="img/netmeeting-2.png" alt="" />
+        </div>
+        <div class="start-bar__clock-wrap">
+          <div class="vertical-line-wrap">
+            <div class="vertical-line"></div>
+            <div class="vertical-outline"></div>
+          </div>
+          <div class="start-bar__clock">
+            <img src="img/loudspeaker_rays-0.png" alt="" />
+            <h2 class="clock hidden" id="clock"></h2>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/index.js"></script>
     <script src="js/greetings.js"></script>
     <script src="js/clock.js"></script>
     <script src="js/quotes.js"></script>
     <script src="js/todos.js"></script>
+    <script src="js/background.js"></script>
+    <script src="js/weather.js"></script>
   </body>
 </html>

@@ -1,4 +1,3 @@
-const toDosForm = document.querySelector("#todos-form");
 const toDosInput = document.querySelector("#todos-input");
 const toDosList = document.querySelector("#todos");
 
@@ -27,8 +26,8 @@ function printToDos(newToDo) {
   button.addEventListener("click", removeToDos);
 
   li.id = newToDo.id;
-  span.innerText = newToDo.todo;
-  button.innerText = "❌";
+  span.innerText = `* ${newToDo.todo}`;
+  button.style.backgroundImage = `url("img/close.png")`;
   li.appendChild(span);
   li.appendChild(button);
   toDosList.appendChild(li);

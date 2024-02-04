@@ -1,3 +1,390 @@
+@import "variables.css";
+@import url(https://db.onlinewebfonts.com/c/3d1b893686cc335f18f3ef9dd56380b4?family=Batang);
+
+body {
+  overflow-x: hidden;
+  background-image: url(../img/background.png);
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+button {
+  font-family: "Batang";
+}
+
+footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+
 .hidden {
   display: none;
+}
+
+.boot {
+  z-index: 999;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  animation: booting 5s forwards;
+}
+
+.boot img {
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes booting {
+  0% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+.start-bar {
+  height: 28px;
+  background-color: #c0c0c0;
+  border-top: 2px solid #f5f8f7;
+  padding: 1px;
+  display: flex;
+}
+
+.start-menu {
+  position: absolute;
+  bottom: 30px;
+  width: 230px;
+}
+
+.start-menu img {
+  width: 100%;
+}
+
+.start-bar__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 24px;
+  background-color: #c0c0c0;
+  border-top: 2px solid #f5f8f7;
+  border-left: 2px solid #f5f8f7;
+  border-right: 2px solid #6a6a6a;
+  border-bottom: 2px solid #6a6a6a;
+}
+
+.start-bar__button button {
+  width: 56px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
+  background-color: #c0c0c0;
+  border: none;
+}
+
+.start-bar__button button:focus {
+  outline: 1px dotted black;
+}
+
+.start-bar__button button img {
+  width: 24px;
+  margin-left: 2px;
+}
+
+.start-bar__button button span {
+  cursor: default;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.start-bar__icon-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  height: 28px;
+  margin-left: 2px;
+  margin-right: 4px;
+}
+
+.vertical-line-wrap {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.vertical-line {
+  height: 100%;
+  border-left: 2px solid #a4a4a4;
+  border-right: 1px solid #f9f9f9;
+  margin-right: 3px;
+}
+
+.vertical-outline {
+  height: 80%;
+  width: 1px;
+  background-color: #d7d7d7;
+  border-left: 1px solid #f3f3f3;
+  border-right: 1px solid #939393;
+}
+
+.start-bar__icon-wrap img {
+  width: 20px;
+}
+
+.start-bar__clock-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.start-bar__clock {
+  background-color: #c3c1bf;
+  padding: 2px 4px;
+  margin-left: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 2px solid #8d8889;
+  border-right: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  border-left: 2px solid #8d8889;
+}
+
+.start-bar__clock img {
+  width: 20px;
+}
+
+.start-bar__clock h2 {
+  margin: 0px 8px 2px 8px;
+  font-size: 14px;
+}
+
+.background-icon-wrap {
+  cursor: pointer;
+  width: 55px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 8px;
+  margin-left: 8px;
+  margin-bottom: 12px;
+}
+
+.background-icon-wrap img {
+  width: 32px;
+  margin-bottom: 4px;
+}
+
+.background-icon-wrap span {
+  text-align: center;
+  color: #fff;
+  font-size: 12px;
+}
+
+.notepad-todos {
+  position: absolute;
+  padding: 3px;
+  top: 10%;
+  left: 30%;
+  height: 500px;
+  width: 300px;
+  background-color: #c0c0c0;
+}
+
+.notepad-todos__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 20px;
+  width: 100%;
+  background: linear-gradient(90deg, navy, #1084d0);
+}
+
+.notepad-todos__header__title {
+  display: flex;
+  align-items: center;
+  margin-left: 2px;
+}
+
+.notepad-todos__header__title img {
+  width: 12px;
+  margin-right: 4px;
+}
+
+.notepad-todos__header__title span {
+  color: white;
+  font-size: 13px;
+}
+
+.notepad-todos__header__icons {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+  margin-top: 1px;
+  margin-right: 1px;
+}
+
+.notepad-todos__header__icons img {
+  width: 16px;
+  border-right: 2px solid #333;
+  border-bottom: 2px solid #333;
+}
+
+.notepad-todos__main {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3px;
+  height: 475px;
+  background-color: #fff;
+  border-top: 2px solid #383838;
+  border-left: 2px solid #383838;
+}
+
+.notepad-todos__main .todos-form {
+  margin: 8px auto 0 auto;
+}
+
+input {
+  border-top: 2px solid #383838;
+  border-left: 2px solid #383838;
+  border-right: 2px solid #d3d3d3;
+  border-bottom: 2px solid #d3d3d3;
+}
+
+input:focus {
+  border-top: 2px solid #383838;
+  border-left: 2px solid #383838;
+  border-right: 2px solid #d3d3d3;
+  border-bottom: 2px solid #d3d3d3;
+}
+
+input:focus-visible {
+  outline: none;
+}
+
+.notepad-todos__main ul {
+  margin: 12px 8px;
+}
+
+.notepad-todos__main li {
+  font-size: 14px;
+  margin-bottom: 6px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.notepad-todos__main button {
+  background-size: cover;
+  width: 16px;
+  height: 16px;
+  border: none;
+  border-right: 2px solid #333;
+  border-bottom: 2px solid #333;
+}
+
+.notepad-todos__main h4 {
+  font-size: 14px;
+  margin-top: 8px;
+  margin-left: 8px;
+}
+
+.computer-greeting {
+  position: absolute;
+  padding: 3px;
+  top: 20%;
+  left: 20%;
+  height: 500px;
+  width: 500px;
+  background-color: #c0c0c0;
+}
+
+.computer-greeting__main {
+  margin: 8px;
+  font-size: 14px;
+}
+
+.computer-greeting__main__tab {
+  z-index: 2;
+  position: absolute;
+  display: inline-block;
+  padding-top: 2px;
+  padding-left: 2px;
+  top: 29px;
+  height: 20px;
+  width: 52px;
+  border-top: 2px solid #eee;
+  border-left: 2px solid #eee;
+  border-right: 2px solid #090909;
+  border-bottom: 2px solid #c0c0c0;
+}
+
+.computer-greeting__main__tab span {
+  display: inline-block;
+  padding-right: 8px;
+  font-size: 14px;
+}
+
+.computer-greeting__main__screen {
+  margin-top: 30px;
+  height: 410px;
+  display: flex;
+
+  border-top: 2px solid #eee;
+  border-left: 2px solid #eee;
+  border-right: 2px solid #090909;
+  border-bottom: 2px solid #090909;
+}
+
+.computer-greeting__main__screen-img {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  width: 50%;
+}
+
+.computer-greeting__main__screen-img img {
+  width: 125px;
+  height: 119px;
+}
+
+.computer-greeting__main__screen-text {
+  margin-top: 10px;
+  width: 50%;
+}
+
+.computer-greeting__main__screen-text h1 {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.quote {
+  margin-top: 40px;
+  width: 200px;
+}
+
+.quote span {
+  display: block;
+}
+
+.quote span:first-child {
+  margin-bottom: 4px;
+}
+
+.weather {
+  margin-top: 40px;
 }
