@@ -27,7 +27,7 @@ function printToDos(newToDo) {
 
   li.id = newToDo.id;
   span.innerText = `* ${newToDo.todo}`;
-  button.style.backgroundImage = `url("img/close.png")`;
+  button.classList.add("close");
   li.appendChild(span);
   li.appendChild(button);
   toDosList.appendChild(li);

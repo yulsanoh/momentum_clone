@@ -1,5 +1,5 @@
-const closeButtonSystem = document.querySelector(".computer-greeting #close-button");
-const closeButtonNotepad = document.querySelector(".notepad-todos #close-button");
+const closeButtonSystem = document.querySelector(".computer-greeting .close");
+const closeButtonNotepad = document.querySelector(".notepad-todos .close");
 const system = document.querySelector(".computer-greeting");
 const notepad = document.querySelector(".notepad-todos");
 const systemIcon = document.querySelector("#system");

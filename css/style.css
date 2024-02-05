@@ -158,8 +158,21 @@ footer {
   border-right: 1px solid #939393;
 }
 
+.vertical-outline:hover {
+  cursor: col-resize;
+}
+
 .start-bar__icon-wrap img {
   width: 20px;
+}
+
+.start-bar__icon-wrapper {
+  padding: 2px;
+}
+
+.start-bar__icon-wrapper:hover {
+  background-color: rgb(205, 205, 205);
+  outline: 1px solid #c8c8c8;
 }
 
 .start-bar__clock-wrap {
@@ -256,19 +269,36 @@ footer {
   margin-right: 1px;
 }
 
-.notepad-todos__header__icons img {
-  width: 16px;
-  border-top: 2px solid #c1bbbb;
-  border-left: 2px solid #c1bbbb;
-  border-right: 2px solid #333;
-  border-bottom: 2px solid #333;
+button:not(#start-menu-button) {
+  min-width: 16px;
+  min-height: 14px;
+  border: none;
+  background-color: silver;
+  background-repeat: no-repeat;
+  background-size: auto;
+  box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #fff, inset -2px -2px grey,
+    inset 2px 2px #dfdfdf;
+  padding: 0px;
 }
 
-.notepad-todos__header__icons img:active {
-  border-top: 2px solid #333;
-  border-left: 2px solid #333;
-  border-right: 2px solid #c1bbbb;
-  border-bottom: 2px solid #c1bbbb;
+button:not(#start-menu-button):active {
+  box-shadow: inset -1px -1px #fff, inset 1px 1px #0a0a0a,
+    inset -2px -2px #dfdfdf, inset 2px 2px grey;
+}
+
+.min {
+  background-image: url(../img/minimize.svg);
+  background-position: bottom 3px left 4px;
+}
+
+.max {
+  background-image: url(../img/maximize.svg);
+  background-position: top 2px left 3px;
+}
+
+.close {
+  background-image: url(../img/close.svg);
+  background-position: top 3px left 4px;
 }
 
 .notepad-todos__main {
@@ -282,10 +312,10 @@ footer {
 }
 
 .notepad-todos__main img {
-  width: 200px;
+  width: 284px;
   height: 200px;
   object-fit: cover;
-  margin: 24px auto 0px auto;
+  margin: 8px auto 0px auto;
 }
 
 .notepad-todos__main .todos-form {
