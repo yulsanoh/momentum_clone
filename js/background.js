@@ -1,6 +1,5 @@
-// const img = ["0.jpg", "1.jpg", "2.jpg"];
-// const randomImage = Math.floor(Math.random() * img.length);
-// const backgroundContainer = document.querySelector("#background");
-// const backgroundImage = document.querySelector("#background div");
+const img = ["0.webp", "1.webp", "2.webp", "3.webp"];
+const randomImage = Math.floor(Math.random() * img.length);
+const notepadImage = document.querySelector("#notepad-todos-image");
 
-// backgroundImage.style.backgroundImage = `url("img/${img[randomImage]}")`;
+notepadImage.src = `img/${img[randomImage]}`;

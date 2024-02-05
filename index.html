@@ -24,7 +24,7 @@
       </div>
       <div id="notepad" class="background-icon-wrap">
         <img src="img/notepad-2.png" alt="" />
-        <span>메모장</span>
+        <span>할 일</span>
       </div>
       <div class="notepad-todos hidden">
         <div class="notepad-todos__header">
@@ -39,8 +39,9 @@
           </div>
         </div>
         <div class="notepad-todos__main">
+          <img id="notepad-todos-image" src="" alt="" />
           <form class="todos-form hidden" id="todos-form" action="">
-            <input id="todos-input" type="text" placeholder="오늘의 할 일은?" />
+            <input id="todos-input" type="text" placeholder="오늘의 할 일은?" required />
           </form>
           <ul class="hidden" id="todos"></ul>
           <h4>내 컴퓨터를 열어 로그인을 해주세요.</h4>
@@ -90,7 +91,7 @@
     </main>
 
     <footer>
-      <div class="start-menu hidden">
+      <div class="start-menu start-menu-hidden">
         <img src="img/startmenu.png" alt="" />
       </div>
       <div class="start-bar">
@@ -117,7 +118,7 @@
           </div>
           <div class="start-bar__clock">
             <img src="img/loudspeaker_rays-0.png" alt="" />
-            <h2 class="clock hidden" id="clock"></h2>
+            <h2 class="clock" id="clock"></h2>
           </div>
         </div>
       </div>
